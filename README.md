@@ -64,13 +64,29 @@ After a model has been trained and exported, you can deploy the trained policy i
 
 
 ===========使用记录==================
-====
-(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ pip install isaaclab==2.2.0 --no-deps
-(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ python ./scripts/list_envs.py
-(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ python ./scripts/csv_to_npz.py   --headless   --input_file=../booster_assets/motions/K1/k1_fight_001_30fps.csv   --input_fps=30   --output_name=../booster_assets/motions/K1/k1_fight_001.npz
 
-(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ pip install rsl-rl-lib==2.2.4
+==========================
+(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ python ./scripts/list_envs.py
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                            Available Environments in Isaac Lab                                                                             |
++--------+---------------------------------+---------------------------------+---------------------------------------------------------------------------------------------------------------+
+| S. No. | Task Name                       | Entry Point                     | Config                                                                                                        |
++--------+---------------------------------+---------------------------------+---------------------------------------------------------------------------------------------------------------+
+|   1    | Booster-K1-Fight_001-v0         | isaaclab.envs:ManagerBasedRLEnv | booster_train.tasks.manager_based.beyond_mimic.robots.k1.fight_001.env_cfg:RoughWoStateEstimationEnvCfg       |
+|   2    | Booster-K1-Fight_001-v0-Play    | isaaclab.envs:ManagerBasedRLEnv | booster_train.tasks.manager_based.beyond_mimic.robots.k1.fight_001.env_cfg:PlayFlatWoStateEstimationEnvCfg    |
+|   3    | Booster-K1-MJ_Dance_002-v0      | isaaclab.envs:ManagerBasedRLEnv | booster_train.tasks.manager_based.beyond_mimic.robots.k1.mj_dance_002.env_cfg:RoughWoStateEstimationEnvCfg    |
+|   4    | Booster-K1-MJ_Dance_002-v0-Play | isaaclab.envs:ManagerBasedRLEnv | booster_train.tasks.manager_based.beyond_mimic.robots.k1.mj_dance_002.env_cfg:PlayFlatWoStateEstimationEnvCfg |
+|   5    | Booster-K1-MJ_Dance_004-v0      | isaaclab.envs:ManagerBasedRLEnv | booster_train.tasks.manager_based.beyond_mimic.robots.k1.mj_dance_004.env_cfg:RoughWoStateEstimationEnvCfg    |
++--------+---------------------------------+---------------------------------+---------------------------------------------------------------------------------------------------------------+
+
+
+(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ pip install isaaclab==2.2.0 --no-deps
+(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ python ./scripts/csv_to_npz.py --headless --input_file=../booster_assets/motions/K1/k1_fight_001_30fps.csv --input_fps=30 --output_name=../booster_assets/motions/K1/k1_fight_001.npz
+
+
+(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ pip install rsl-rl-lib==2.3.1
 (isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ python ./scripts/rsl_rl/train.py --task=Booster-K1-Fight_001-v0 --headless --device cuda:0
+
 
 
 
