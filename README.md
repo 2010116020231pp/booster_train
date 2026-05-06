@@ -63,6 +63,18 @@ This repository follows the standard Isaac Lab project structure, and is tested 
 After a model has been trained and exported, you can deploy the trained policy in MuJoCo or on real Booster robots using the [booster_deploy](https://github.com/BoosterRobotics/booster_deploy) repository. For more details, please refer to the instructions in the [booster_deploy](https://github.com/BoosterRobotics/booster_deploy) repository.
 
 
+===========使用记录==================
+====
+(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ pip install isaaclab==2.2.0 --no-deps
+(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ python ./scripts/list_envs.py
+(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ python ./scripts/csv_to_npz.py   --headless   --input_file=../booster_assets/motions/K1/k1_fight_001_30fps.csv   --input_fps=30   --output_name=../booster_assets/motions/K1/k1_fight_001.npz
+
+(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ pip install rsl-rl-lib==2.2.4
+(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ python ./scripts/rsl_rl/train.py --task=Booster-K1-Fight_001-v0 --headless --device cuda:0
+
+
+
+
 ## Acknowledgements
 
 - [whole_body_tracking](https://github.com/HybridRobotics/whole_body_tracking): the motion tracking training in BeyondMimic, which is a versatile humanoid control framework that provides highly dynamic motion tracking.
