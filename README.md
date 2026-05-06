@@ -66,7 +66,7 @@ After a model has been trained and exported, you can deploy the trained policy i
 ===========使用记录==================
 
 ==========================
-(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ python ./scripts/list_envs.py
+(isaacsim) python ./scripts/list_envs.py
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |                                                                            Available Environments in Isaac Lab                                                                             |
 +--------+---------------------------------+---------------------------------+---------------------------------------------------------------------------------------------------------------+
@@ -80,12 +80,12 @@ After a model has been trained and exported, you can deploy the trained policy i
 +--------+---------------------------------+---------------------------------+---------------------------------------------------------------------------------------------------------------+
 
 
-(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ pip install isaaclab==2.2.0 --no-deps
-(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ python ./scripts/csv_to_npz.py --headless --input_file=../booster_assets/motions/K1/k1_fight_001_30fps.csv --input_fps=30 --output_name=../booster_assets/motions/K1/k1_fight_001.npz
+(isaacsim) pip install isaaclab==2.2.0 --no-deps
+(isaacsim)  python ./scripts/csv_to_npz.py --headless --input_file=../booster_assets/motions/K1/k1_fight_001_30fps.csv --input_fps=30 --output_name=../booster_assets/motions/K1/k1_fight_001.npz
 
 
-(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ pip install rsl-rl-lib==2.3.1
-(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ python ./scripts/rsl_rl/train.py --task=Booster-K1-Fight_001-v0 --headless --device cuda:0
+(isaacsim) pip install rsl-rl-lib==2.3.1
+(isaacsim) python ./scripts/rsl_rl/train.py --task=Booster-K1-Fight_001-v0 --headless --device cuda:0
 
 
 
