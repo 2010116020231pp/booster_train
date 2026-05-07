@@ -89,6 +89,8 @@ After a model has been trained and exported, you can deploy the trained policy i
 
 (isaacsim) python ./scripts/rsl_rl/train.py --task=Booster-K1-Fight_001-v0 --headless --device cuda:0
 
+(isaacsim) jyc@jyc-B365-M-AORUS-ELITE:~/Workspace/booster_train$ python scripts/rsl_rl/play.py --task=Booster-K1-Fight_001-v0 --checkpoint=./logs/rsl_rl/k1_fight_001/2026-05-07_13-50-39/model_2000.pt
+
 
 
 
