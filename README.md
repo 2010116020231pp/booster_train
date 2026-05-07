@@ -81,10 +81,12 @@ After a model has been trained and exported, you can deploy the trained policy i
 
 
 (isaacsim) pip install isaaclab==2.2.0 --no-deps
+
 (isaacsim)  python ./scripts/csv_to_npz.py --headless --input_file=../booster_assets/motions/K1/k1_fight_001_30fps.csv --input_fps=30 --output_name=../booster_assets/motions/K1/k1_fight_001.npz
 
 
 (isaacsim) pip install rsl-rl-lib==2.3.1
+
 (isaacsim) python ./scripts/rsl_rl/train.py --task=Booster-K1-Fight_001-v0 --headless --device cuda:0
 
 
