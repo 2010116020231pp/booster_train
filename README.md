@@ -66,7 +66,9 @@ After a model has been trained and exported, you can deploy the trained policy i
 ===========使用记录==================
 
 ==========================
+```bash
 (isaacsim) python ./scripts/list_envs.py
+```
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 |                                                                            Available Environments in Isaac Lab                                                                             |
 +--------+---------------------------------+---------------------------------+---------------------------------------------------------------------------------------------------------------+
@@ -79,18 +81,21 @@ After a model has been trained and exported, you can deploy the trained policy i
 |   5    | Booster-K1-MJ_Dance_004-v0      | isaaclab.envs:ManagerBasedRLEnv | booster_train.tasks.manager_based.beyond_mimic.robots.k1.mj_dance_004.env_cfg:RoughWoStateEstimationEnvCfg    |
 +--------+---------------------------------+---------------------------------+---------------------------------------------------------------------------------------------------------------+
 
-
+```bash
 (isaacsim) pip install isaaclab==2.2.0 --no-deps
-
+```
+```bash
 (isaacsim)  python ./scripts/csv_to_npz.py --headless --input_file=../booster_assets/motions/K1/k1_fight_001_30fps.csv --input_fps=30 --output_name=../booster_assets/motions/K1/k1_fight_001.npz
-
-
+```
+```bash
 (isaacsim) pip install rsl-rl-lib==2.3.1
-
+```
+```bash
 (isaacsim) python ./scripts/rsl_rl/train.py --task=Booster-K1-Fight_001-v0 --headless --device cuda:0
-
+```
+```bash
 (isaacsim) python scripts/rsl_rl/play.py --task=Booster-K1-Fight_001-v0 --checkpoint=./logs/rsl_rl/k1_fight_001/2026-05-07_13-50-39/model_2000.pt
-
+```
 
 
 
