@@ -99,7 +99,7 @@ After a model has been trained and exported, you can deploy the trained policy i
 
 
 ## 新数据训练步骤
-- 下载重定位后的数据：[重定位开源数据]([booster_deploy](https://github.com/BoosterRobotics/booster_deploy)) - 该csv数据的首行是列名，需要先手动删除后再成npz.
+- 下载重定位后的数据：[重定位开源数据](https://github.com/BoosterRobotics/booster_deploy) - 该csv数据的首行是列名，需要先手动删除后再转成npz.
 - 切换到如下目录：
 ```bash
 ./booster_train/source/booster_train/booster_train/tasks/manager_based/beyond_mimic/robots/k1
