@@ -63,9 +63,8 @@ This repository follows the standard Isaac Lab project structure, and is tested 
 After a model has been trained and exported, you can deploy the trained policy in MuJoCo or on real Booster robots using the [booster_deploy](https://github.com/BoosterRobotics/booster_deploy) repository. For more details, please refer to the instructions in the [booster_deploy](https://github.com/BoosterRobotics/booster_deploy) repository.
 
 
-===========使用记录==================
+## 使用记录
 
-==========================
 ```bash
 (isaacsim) python ./scripts/list_envs.py
 ```
